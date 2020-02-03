@@ -13,8 +13,8 @@
   </Overview>
   <Category>DNS</Category>
   <WebUI>https://[IP]:[PORT:10000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/bind-webmin-unraid/master/my-BIND.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/gjmaudet/bind-webmin-unraid/master/bind_logo.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/bind_webmin.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/bind_logo.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
