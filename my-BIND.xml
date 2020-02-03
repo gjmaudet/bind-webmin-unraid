@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Bind</Name>
+  <Repository>sameersbn/bind</Repository>
+  <Registry>https://hub.docker.com/r/sameersbn/bind</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.plex.tv/categories/docker</Support>
+  <Project>https://plex.tv/</Project>
+  <Overview>
+  </Overview>
+  <Category>DNS</Category>
+  <WebUI>https://[IP]:[PORT:10000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/plexinc/pms-docker/master/plex-unRAID.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+  </Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/bind</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>VERSION</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Key 1" Target="VERSION" Default="latest" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
+  <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/PlexMediaServer</Config>
+</Container>
