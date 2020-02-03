@@ -7,14 +7,14 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.plex.tv/categories/docker</Support>
-  <Project>https://plex.tv/</Project>
+  <Support>https://www.isc.org/bind/</Support>
+  <Project>https://www.isc.org/bind/</Project>
   <Overview>
   </Overview>
   <Category>DNS</Category>
   <WebUI>https://[IP]:[PORT:10000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/plexinc/pms-docker/master/plex-unRAID.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/bind-webmin-unraid/master/my-BIND.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/gjmaudet/bind-webmin-unraid/master/bind_logo.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -40,8 +40,14 @@
       <Name>VERSION</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ROOT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Key 1" Target="VERSION" Default="latest" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
-  <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/PlexMediaServer</Config>
+  <Config Name="Version" Target="VERSION" Default="latest" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
+  <Config Name="Root Password" Target="ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: ROOT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/bind</Config>
 </Container>
