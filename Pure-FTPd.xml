@@ -40,22 +40,22 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/ftp/etc/private</HostDir>
       <ContainerDir>/etc/ssl/private</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/ftp/etc/pure-ftpd/passwd</HostDir>
       <ContainerDir>/etc/pure-ftpd/passwd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/ftp/home/ftpusers/secureftp</HostDir>
       <ContainerDir>/home/ftpusers/secureftp</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/ftp/var/log/pure-ftpd</HostDir>
       <ContainerDir>/var/log/pure-ftpd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -78,7 +78,8 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Version" Target="VERSION" Default="hardened" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">hardened</Config>
-  <Config Name="Root Password" Target="ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: ROOT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ftp</Config>
+  <Config Name="Version" Target="VERSION" Default="hardened" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Flags" Target="ADDED_FLAGS" Default="-d -O w3c:/var/log/pure-ftpd/transfer.log" Mode="" Description="Container Variable: ADDED_FLAGS" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="FTP Root Folder" Target="/home/ftpusers/secureftp" Default="/mnt/user/appdata/ftp/home/ftpusers/secureftp" Mode="rw" Description="Container Path: /home/ftpusers/secureftp" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="FTP Logs" Target="/var/log/pure-ftpd" Default="/mnt/user/appdata/ftp/var/log/pure-ftpd" Mode="rw" Description="Container Path: /var/log/pure-ftpd" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
 </Container>
