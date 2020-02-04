@@ -14,7 +14,7 @@
   <Category>FTP</Category>
   <WebUI></WebUI>
   <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Pure-FTPd.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Pure-FTPd.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/images/Pure-FTPd.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -25,7 +25,18 @@
   </Description>
   <Networking>
     <Mode>br0</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>21</HostPort>
+        <ContainerPort>21</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>30000-30009</HostPort>
+        <ContainerPort>30000-30009</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
