@@ -29,8 +29,23 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/bind</HostDir>
-      <ContainerDir>/data</ContainerDir>
+      <HostDir></HostDir>
+      <ContainerDir>/etc/ssl/private</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/etc/pure-ftpd/passwd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/ftpusers/secureftp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/log/pure-ftpd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -52,7 +67,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Version" Target="VERSION" Default="hardened" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
+  <Config Name="Version" Target="VERSION" Default="hardened" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">hardened</Config>
   <Config Name="Root Password" Target="ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: ROOT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/bind</Config>
+  <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ftp</Config>
 </Container>
