@@ -3,7 +3,7 @@
   <Name>Bind</Name>
   <Repository>sameersbn/bind</Repository>
   <Registry>https://hub.docker.com/r/sameersbn/bind</Registry>
-  <Network>host</Network>
+  <Network>br0</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -14,7 +14,7 @@
   <Category>DNS</Category>
   <WebUI>https://[IP]:[PORT:10000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Bind.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/bind_logo.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Bind.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -24,7 +24,7 @@
   <Description>
   </Description>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>br0</Mode>
     <Publish/>
   </Networking>
   <Data>
