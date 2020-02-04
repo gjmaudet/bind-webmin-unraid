@@ -9,20 +9,18 @@
   <Privileged>false</Privileged>
   <Support>https://www.pureftpd.org/project/pure-ftpd/</Support>
   <Project>https://www.pureftpd.org/project/pure-ftpd/</Project>
-  <Overview>
-  </Overview>
+  <Overview/>
   <Category>FTP</Category>
-  <WebUI></WebUI>
+  <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Pure-FTPd.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/images/Pure-FTPd.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled></DateInstalled>
+  <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Description>
-  </Description>
+  <Description/>
   <Networking>
     <Mode>br0</Mode>
     <Publish>
@@ -49,35 +47,11 @@
       <ContainerDir>/etc/pure-ftpd/passwd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/ftp/home/ftpusers/secureftp</HostDir>
-      <ContainerDir>/home/ftpusers/secureftp</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/ftp/var/log/pure-ftpd</HostDir>
-      <ContainerDir>/var/log/pure-ftpd</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
   </Data>
   <Environment>
-    <Variable>
-      <Value>hardened</Value>
-      <Name>VERSION</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>-d -O w3c:/var/log/pure-ftpd/transfer.log</Value>
-      <Name>ADDED_FLAGS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>PUBLICHOST</Name>
-      <Mode/>
-    </Variable>
   </Environment>
   <Labels/>
+  <Config Name="Public FQDN" Target="PUBLICHOST" Default="" Mode="" Description="Container Variable: PUBLICHOST" Type="Variable" Display="true" Required="true" Mask="false"></Config>
   <Config Name="Version" Target="VERSION" Default="hardened" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
   <Config Name="Flags" Target="ADDED_FLAGS" Default="-d -O w3c:/var/log/pure-ftpd/transfer.log" Mode="" Description="Container Variable: ADDED_FLAGS" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
   <Config Name="FTP Root Folder" Target="/home/ftpusers/secureftp" Default="/mnt/user/appdata/ftp/home/ftpusers/secureftp" Mode="rw" Description="Container Path: /home/ftpusers/secureftp" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
