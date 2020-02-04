@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Bind</Name>
-  <Repository>sameersbn/bind</Repository>
-  <Registry>https://hub.docker.com/r/sameersbn/bind</Registry>
-  <Network>host</Network>
+  <Name>Pure-FTPd</Name>
+  <Repository>stilliard/pure-ftpd</Repository>
+  <Registry>https://hub.docker.com/r/stilliard/pure-ftpd</Registry>
+  <Network>br0</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://www.isc.org/bind/</Support>
-  <Project>https://www.isc.org/bind/</Project>
+  <Support>https://www.pureftpd.org/project/pure-ftpd/</Support>
+  <Project>https://www.pureftpd.org/project/pure-ftpd/</Project>
   <Overview>
   </Overview>
-  <Category>DNS</Category>
-  <WebUI>https://[IP]:[PORT:10000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Bind.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/bind_logo.jpg</Icon>
+  <Category>FTP</Category>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Pure-FTPd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Pure-FTPd.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -24,7 +24,7 @@
   <Description>
   </Description>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>br0</Mode>
     <Publish/>
   </Networking>
   <Data>
@@ -36,18 +36,23 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>latest</Value>
+      <Value>hardened</Value>
       <Name>VERSION</Name>
       <Mode/>
     </Variable>
     <Variable>
+      <Value>-d -O w3c:/var/log/pure-ftpd/transfer.log</Value>
+      <Name>ADDED_FLAGS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value></Value>
-      <Name>ROOT_PASSWORD</Name>
+      <Name>PUBLICHOST</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Version" Target="VERSION" Default="latest" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
+  <Config Name="Version" Target="VERSION" Default="hardened" Mode="" Description="Container Variable: VERSION" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
   <Config Name="Root Password" Target="ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: ROOT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="AppData Config Path" Target="/data" Default="/mnt/user/appdata/bind" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/bind</Config>
 </Container>
