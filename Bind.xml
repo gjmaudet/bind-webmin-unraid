@@ -13,8 +13,8 @@
   </Overview>
   <Category>DNS</Category>
   <WebUI>https://[IP]:[PORT:10000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/bind_webmin.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/bind_logo.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/Bind.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/gjmaudet/unraid-docker-templates/master/images/Bind.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -24,7 +24,7 @@
   <Description>
   </Description>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>br0</Mode>
     <Publish/>
   </Networking>
   <Data>
